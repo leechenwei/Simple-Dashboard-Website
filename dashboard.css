@@ -1,0 +1,230 @@
+/*Import new font from Googleapis*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Main container excluding navigation bar*/
+.container {
+    position:fixed;
+    top:0;
+    left:7.8ch;
+    width:100%;
+    height:100%;
+    background-color:lightslategray;
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+
+
+.container .container-bar {
+    position:fixed;
+    display:table;
+    width:100%;
+    margin:0;
+    padding:0;
+    height:60px;
+    padding-left:2ch;
+    background-color:lightcyan;
+    overflow:hidden;
+    z-index:999;
+}
+
+.container .container-bar .container-title {
+    display:table-cell;
+    vertical-align:middle;
+    padding-left:3ch;
+    font-size:2.5ch;
+}
+
+/*First container of the main website*/
+.Profile-section {
+    display:flex;
+    flex-direction:row;
+    height:30ch;
+    margin:8ch 8ch 2ch 2ch;
+    overflow:auto;
+    z-index:-1;
+    border-radius:12px;
+}
+
+.Profile-role {
+    position:relative;
+    display:grid;
+    width:25%;
+    overflow:hidden;
+}
+
+.Profile-role-pic {
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+}
+
+/*For mobile-user friendly*/
+@media (max-width: 800px) {
+
+    .Profile-section {
+      flex-direction: column;
+      height:fit-content;
+      margin:8ch 10ch 2ch 2ch;
+      overflow:auto;
+    }
+
+    .Profile-role {
+        width:100%;
+        height:100%;
+    }
+
+  }
+  
+.Profile-role-name-box {
+    position:absolute;
+    bottom:0%;
+    left:50%;
+    transform: translate(-50%);
+    background-color:grey;
+    width:100%;
+    text-align:center;
+    height:3.5ch;
+}
+
+.Profile-role-name {
+    font-size:2ch;
+    font-weight:500;
+    text-transform:uppercase;
+    color:white;
+}
+
+.Profile-details-container {
+    display:flex;
+    flex-direction:column;
+    row-gap:3ch;
+    width:100%;
+    height:100%;
+    background-color:powderblue;
+    text-align:center;
+    font-size:2ch;
+}
+
+
+.Profile-details-box {
+    background-color:lightgrey;
+    border-radius:12px;
+    width:50%;
+    margin:auto;
+}
+
+/* Second container of the main website*/
+.Class-section {
+    max-height:50ch;
+    margin:2ch 8ch 2ch 2ch;
+    overflow:auto;
+    z-index:-1;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+/* Scroll without the appearance of scrollbar*/
+.Class-section ::-webkit-scrollbar {
+    display:none;
+}
+
+.Class-title-bar {
+    background-color:lightcyan;
+    width:100%;
+    height:max-content;
+    text-align:center;
+    overflow:hidden;
+}
+
+.Class-title {
+    font-size:2.5ch;
+    text-transform:uppercase;
+    font-weight:650;
+}
+
+/* Zone to display the classes enrolled*/
+.Class-content {
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:3ch;
+    background-color:powderblue;
+    height:40ch;
+    width:100%;
+    padding:3ch;
+    overflow:auto;
+}
+
+/* The box of a class*/
+.Class-content-box {
+    position:relative;
+    height:20ch;
+    width:fit-content;
+    background-color:lightgray;
+    border-radius:12px;
+    text-align:center;
+    font-size:2ch;
+    overflow:hidden;
+}
+
+.Class-content-class-pic {
+    width:20ch;
+    height:20ch;
+}
+
+/* Display Class Name container*/
+.Class-content-name-box {
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    width:100%;
+    height:5ch;
+    font-size:100%;
+}
+
+.Class-content-name {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color:green;
+    font-size:auto;
+}
+
+/* When hovering over each class*/
+.Class-content-box:hover,
+.Class-content a:hover {
+    transform: scale(1.1);
+    font-weight:bold;
+}
+
+/* Mobile-user friendly layout*/
+@media screen and (max-device-width:800px) {
+    .Class-section {
+        margin:2ch 10ch 2ch 2ch;
+    }
+    
+    .Class-content {
+        flex-direction:column;
+        row-gap:5ch;
+        justify-content:center;
+        overflow:auto;
+        height:50ch;
+    }
+
+    .Class-content-box  {
+        min-width:100%;
+    }
+
+    .Class-content-class-pic {
+        width:100%;
+        height:100%;
+    }
+
+    .Class-content-name {
+        font-size:50%;
+    }
+}
